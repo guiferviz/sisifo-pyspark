@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "sisifo-pyspark"
+version = "0.1.0"
+description = "Sisifo plugin for PySpark"
+authors = [
+    "guiferviz <guiferviz@gmail.com>"
+]
+license = "MIT"
+homepage = "https://github.com/guiferviz/sisifo-pyspark"
+repository = "https://github.com/guiferviz/sisifo-pyspark"
+readme = "README.md"
+keywords = [
+    "pyspark",
+    "tasks",
+    "framework",
+    "pipeline"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyspark = {version = "^3.1.2", optional=true}
+pandas = "^1.3.2"
+sisifo = "^0.1.1"
+
+[tool.poetry.extras]
+pyspark = ["pyspark"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-mock = "^3.6.1"
+pytest-cov = "^2.12.1"
+flake8 = "^3.9.2"
+flake8-quotes = "^3.3.0"
+flake8-commas = "^2.0.0"
+pyright = "^0.0.3"
+pandas = "^1.3.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
